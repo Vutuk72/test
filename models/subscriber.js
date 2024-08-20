@@ -1,13 +1,11 @@
-import { subscribe } from '../routes/subscribers'
-
 const mongoose = require('mongoose')
 
-const subscribersShema = new mongoose.Schema({
+const subscriberSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true
     },
-    subscribersToChannel: {
+    subscribedToChannel: {
         type: String,
         required: true
     },
@@ -18,4 +16,4 @@ const subscribersShema = new mongoose.Schema({
     }
 })
 
-mondule.exports = mongoose.model('Subscriber', subscriberSchema)
+module.exports = mongoose.model('Subscriber', subscriberSchema)
